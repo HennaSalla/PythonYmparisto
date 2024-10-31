@@ -44,9 +44,9 @@ def calculateCode128BCheksum(text: str) -> int:
     code128BChecksum = weightedSum % 103
     return code128BChecksum
 
-# TODO: Tee tämä funktio loppuun ja testaa sitä Notepadissa
+
 def createCode128B(text: str) -> str:
-    """Creates a complete code128B barcode to be printed using Libre Code 128 font
+    """Creates a complete code128B barcode to be printed using Libre Code128 font
 
     Args:
         text (str): The text for a barcode without checksum
@@ -55,6 +55,11 @@ def createCode128B(text: str) -> str:
         str: String containing start, barcode, checksum and stop symbols
     """
     code128BarcodeString = ''
+    startChar = chr(204)
+    stopChar = chr(206)
+    checkSum = calculateCode128BCheksum(text)
+    checkSumSymbol = chr(checkSum + 32)
+    code128BarcodeString = startChar + text + checkSumSymbol + stopChar
     return code128BarcodeString
 
 if __name__ == "__main__":
