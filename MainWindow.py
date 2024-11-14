@@ -3,8 +3,7 @@
 
 # Tarvittavat kirjastot, tulevat automaattisesti ei-käytetyt poistettu
 from PySide6.QtCore import (QCoreApplication, QMetaObject, QRect)
-from PySide6.QtWidgets import (QLabel, QLineEdit,
-    QMenuBar, QPushButton, QStatusBar, QWidget)
+from PySide6.QtWidgets import (QLabel, QLineEdit, QMenuBar, QPushButton, QStatusBar, QWidget)
 
 # Luokka, josta luodaan varsinaisen ohjelman pääikkuna
 class Ui_MainWindow(object):
