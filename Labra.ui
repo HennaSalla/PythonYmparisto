@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>566</width>
-    <height>1022</height>
+    <width>530</width>
+    <height>340</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -85,7 +85,7 @@
      <rect>
       <x>30</x>
       <y>20</y>
-      <width>71</width>
+      <width>91</width>
       <height>16</height>
      </rect>
     </property>
@@ -123,15 +123,15 @@
     <property name="geometry">
      <rect>
       <x>30</x>
-      <y>150</y>
-      <width>151</width>
+      <y>190</y>
+      <width>221</width>
       <height>51</height>
      </rect>
     </property>
     <property name="font">
      <font>
       <family>Libre Barcode 128 Text</family>
-      <pointsize>30</pointsize>
+      <pointsize>36</pointsize>
      </font>
     </property>
     <property name="text">
@@ -141,9 +141,9 @@
    <widget class="QPushButton" name="printPushButton">
     <property name="geometry">
      <rect>
-      <x>270</x>
-      <y>240</y>
-      <width>221</width>
+      <x>360</x>
+      <y>200</y>
+      <width>131</width>
       <height>41</height>
      </rect>
     </property>
@@ -156,19 +156,18 @@
      <cursorShape>PointingHandCursor</cursorShape>
     </property>
     <property name="styleSheet">
-     <string notr="true">background-color: rgb(255, 255, 127);
-color: rgb(255, 0, 0);</string>
+     <string notr="true"/>
     </property>
     <property name="text">
      <string>Tulosta</string>
     </property>
    </widget>
-   <widget class="QSpinBox" name="amountSspinBox">
+   <widget class="QSpinBox" name="amountSpinBox">
     <property name="geometry">
      <rect>
-      <x>390</x>
-      <y>180</y>
-      <width>101</width>
+      <x>270</x>
+      <y>200</y>
+      <width>81</width>
       <height>41</height>
      </rect>
     </property>
@@ -190,36 +189,30 @@ color: rgb(255, 0, 0);</string>
      <number>999</number>
     </property>
    </widget>
-   <widget class="QDial" name="dial">
+   <widget class="QLabel" name="amountLabel">
     <property name="geometry">
      <rect>
-      <x>10</x>
-      <y>380</y>
-      <width>50</width>
-      <height>64</height>
-     </rect>
-    </property>
-    <property name="minimum">
-     <number>1</number>
-    </property>
-    <property name="maximum">
-     <number>10</number>
-    </property>
-   </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>10</x>
-      <y>370</y>
-      <width>47</width>
-      <height>13</height>
+      <x>270</x>
+      <y>180</y>
+      <width>111</width>
+      <height>16</height>
      </rect>
     </property>
     <property name="text">
-     <string>1</string>
+     <string>Etikettien määrä</string>
     </property>
-    <property name="alignment">
-     <set>Qt::AlignCenter</set>
+   </widget>
+   <widget class="QLabel" name="exampleStickerLabel">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>170</y>
+      <width>91</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Mallietiketti</string>
     </property>
    </widget>
   </widget>
@@ -228,150 +221,20 @@ color: rgb(255, 0, 0);</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>566</width>
+     <width>530</width>
      <height>21</height>
     </rect>
    </property>
-   <widget class="QMenu" name="menuTiedosto">
-    <property name="title">
-     <string>Tiedosto</string>
-    </property>
-    <widget class="QMenu" name="menuTulosta">
-     <property name="title">
-      <string>Tulosta</string>
-     </property>
-     <addaction name="actionViivakoodi"/>
-     <addaction name="actionNimilappu"/>
-    </widget>
-    <addaction name="actionTallenna"/>
-    <addaction name="menuTulosta"/>
-    <addaction name="separator"/>
-    <addaction name="actionLopeta"/>
-   </widget>
-   <widget class="QMenu" name="menuMuokkaa">
-    <property name="title">
-     <string>Muokkaa</string>
-    </property>
-    <widget class="QMenu" name="menuLiit_m_r_ten">
-     <property name="title">
-      <string>Liitä määräten</string>
-     </property>
-     <addaction name="actionArvot"/>
-     <addaction name="actionKaavat"/>
-     <addaction name="actionMuotoilut"/>
-    </widget>
-    <addaction name="actionKopioi"/>
-    <addaction name="actionLiit"/>
-    <addaction name="actionLeikkaa"/>
-    <addaction name="menuLiit_m_r_ten"/>
-   </widget>
-   <addaction name="menuTiedosto"/>
-   <addaction name="menuMuokkaa"/>
   </widget>
   <widget class="QStatusBar" name="statusbar"/>
-  <action name="actionTallenna">
-   <property name="text">
-    <string>Tallenna...</string>
-   </property>
-   <property name="shortcut">
-    <string>Ctrl+S</string>
-   </property>
-  </action>
-  <action name="actionLopeta">
-   <property name="text">
-    <string>Lopeta</string>
-   </property>
-  </action>
-  <action name="actionViivakoodi">
-   <property name="text">
-    <string>Viivakoodi</string>
-   </property>
-  </action>
-  <action name="actionNimilappu">
-   <property name="text">
-    <string>Nimilappu</string>
-   </property>
-  </action>
-  <action name="actionKopioi">
-   <property name="text">
-    <string>Kopioi</string>
-   </property>
-   <property name="shortcut">
-    <string>Ctrl+C</string>
-   </property>
-  </action>
-  <action name="actionLiit">
-   <property name="text">
-    <string>Liitä</string>
-   </property>
-   <property name="shortcut">
-    <string>Ctrl+V</string>
-   </property>
-  </action>
-  <action name="actionLeikkaa">
-   <property name="text">
-    <string>Leikkaa</string>
-   </property>
-   <property name="shortcut">
-    <string>Ctrl+X</string>
-   </property>
-  </action>
-  <action name="actionArvot">
-   <property name="text">
-    <string>Arvot</string>
-   </property>
-  </action>
-  <action name="actionKaavat">
-   <property name="text">
-    <string>Kaavat</string>
-   </property>
-  </action>
-  <action name="actionMuotoilut">
-   <property name="text">
-    <string>Muotoilut</string>
-   </property>
-  </action>
  </widget>
  <tabstops>
   <tabstop>ssnLineEdit</tabstop>
   <tabstop>firstNameLineEdit</tabstop>
   <tabstop>lastNameLineEdit</tabstop>
-  <tabstop>amountSspinBox</tabstop>
+  <tabstop>amountSpinBox</tabstop>
   <tabstop>printPushButton</tabstop>
  </tabstops>
  <resources/>
- <connections>
-  <connection>
-   <sender>ssnLineEdit</sender>
-   <signal>textChanged(QString)</signal>
-   <receiver>barcodeLabel</receiver>
-   <slot>setText(QString)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>99</x>
-     <y>84</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>108</x>
-     <y>185</y>
-    </hint>
-   </hints>
-  </connection>
-  <connection>
-   <sender>dial</sender>
-   <signal>valueChanged(int)</signal>
-   <receiver>label</receiver>
-   <slot>setNum(int)</slot>
-   <hints>
-    <hint type="sourcelabel">
-     <x>113</x>
-     <y>379</y>
-    </hint>
-    <hint type="destinationlabel">
-     <x>117</x>
-     <y>336</y>
-    </hint>
-   </hints>
-  </connection>
- </connections>
+ <connections/>
 </ui>

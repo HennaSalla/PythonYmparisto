@@ -88,3 +88,5 @@ def test_splitSsn():
 def test_getDateOfBirth():
     testSsnOK.getDateOfBirth()
     assert testSsnOK.dateOfBirth == '1928-07-13'
+
+
